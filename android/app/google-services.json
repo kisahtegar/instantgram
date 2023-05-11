@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "843503848206",
+    "project_id": "instantgram-riverpod-course",
+    "storage_bucket": "instantgram-riverpod-course.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843503848206:android:863ea11db83c548a4e655f",
+        "android_client_info": {
+          "package_name": "com.kisahcode.instantgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843503848206-es9bvdpqrt7206qvhgj56m5uetanaeus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDruIwKYepdyNqod4w1BWzFTZipvhRxoPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843503848206-es9bvdpqrt7206qvhgj56m5uetanaeus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
