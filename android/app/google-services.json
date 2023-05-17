@@ -7,14 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:843503848206:android:863ea11db83c548a4e655f",
+        "mobilesdk_app_id": "1:843503848206:android:cf9d2e645634d7f14e655f",
         "android_client_info": {
           "package_name": "com.kisahcode.instantgram"
         }
       },
       "oauth_client": [
         {
-          "client_id": "843503848206-es9bvdpqrt7206qvhgj56m5uetanaeus.apps.googleusercontent.com",
+          "client_id": "843503848206-fqots2kq472cngh3i2tfa8bq986ls7fd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kisahcode.instantgram",
+            "certificate_hash": "2fc761e57d9cdd7c0e4ea054b5f03a257c94bd86"
+          }
+        },
+        {
+          "client_id": "843503848206-6ijkr5ka2snnad0vv8h59e2itmng1sof.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "843503848206-es9bvdpqrt7206qvhgj56m5uetanaeus.apps.googleusercontent.com",
+              "client_id": "843503848206-6ijkr5ka2snnad0vv8h59e2itmng1sof.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "843503848206-391h7ccfaodee1flp2uimlgj8fql1o13.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kisahcode.socialapp"
+              }
             }
           ]
         }

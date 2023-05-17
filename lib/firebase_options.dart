@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDruIwKYepdyNqod4w1BWzFTZipvhRxoPM',
-    appId: '1:843503848206:android:863ea11db83c548a4e655f',
+    appId: '1:843503848206:android:cf9d2e645634d7f14e655f',
     messagingSenderId: '843503848206',
     projectId: 'instantgram-riverpod-course',
     storageBucket: 'instantgram-riverpod-course.appspot.com',
@@ -59,11 +59,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyD2iQXC3eqIg3_-2Csb8pSeqnuA0GzJCvU',
-    appId: '1:843503848206:ios:fefad707d378018f4e655f',
+    appId: '1:843503848206:ios:eb7e823a2cc187264e655f',
     messagingSenderId: '843503848206',
     projectId: 'instantgram-riverpod-course',
     storageBucket: 'instantgram-riverpod-course.appspot.com',
-    iosClientId: '843503848206-gvh5qc9fmvp75bte7lidv3dgnufiar7q.apps.googleusercontent.com',
+    iosClientId:
+        '843503848206-gvh5qc9fmvp75bte7lidv3dgnufiar7q.apps.googleusercontent.com',
     iosBundleId: 'com.kisahcode.instantgram',
   );
 }
