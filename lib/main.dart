@@ -7,6 +7,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'firebase_options.dart';
 import 'state/auth/providers/auth_state_provider.dart';
 import 'state/auth/providers/is_logged_in_provider.dart';
+import 'state/providers/is_loading_provider.dart';
+import 'views/components/loading/loading_screen.dart';
 
 extension Log on Object {
   void log() => devtools.log(toString());
@@ -44,6 +46,20 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.dark,
       home: Consumer(
         builder: (context, ref, child) {
+          // Take care of displaying the loading screen.
+          ref.listen(
+            isLoadingProvider,
+            (_, isLoading) {
+              if (isLoading) {
+                LoadingScreen.instance().show(
+                  context: context,
+                );
+              } else {
+                LoadingScreen.instance().hide();
+              }
+            },
+          );
+
           // Check isLogged in or not?
           final isLoggedIn = ref.watch(isLoggedInProvider);
           isLoggedIn.log();
