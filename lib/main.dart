@@ -9,6 +9,7 @@ import 'state/auth/providers/auth_state_provider.dart';
 import 'state/auth/providers/is_logged_in_provider.dart';
 import 'state/providers/is_loading_provider.dart';
 import 'views/components/loading/loading_screen.dart';
+import 'views/login/login_view.dart';
 
 extension Log on Object {
   void log() => devtools.log(toString());
@@ -93,31 +94,6 @@ class MainView extends StatelessWidget {
             child: const Text('Logout'),
           );
         },
-      ),
-    );
-  }
-}
-
-/// For when you are not logged in.
-class LoginView extends ConsumerWidget {
-  const LoginView({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login View'),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () =>
-                ref.read(authStateProvider.notifier).loginWithGoogle(),
-            child: const Text('Sign in with Google'),
-          )
-        ],
       ),
     );
   }
