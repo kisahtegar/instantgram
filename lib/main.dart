@@ -3,6 +3,7 @@ import 'dart:developer' as devtools show log;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:instantgram/views/components/animations/empty_contents_animation_view.dart';
 
 import 'firebase_options.dart';
 import 'state/auth/providers/auth_state_provider.dart';
@@ -87,12 +88,13 @@ class MainView extends StatelessWidget {
       ),
       body: Consumer(
         builder: (context, ref, child) {
-          return TextButton(
-            onPressed: () async {
-              ref.read(authStateProvider.notifier).logOut();
-            },
-            child: const Text('Logout'),
-          );
+          return const EmptyContentsAnimationView();
+          // return TextButton(
+          //   onPressed: () async {
+          //     ref.read(authStateProvider.notifier).logOut();
+          //   },
+          //   child: const Text('Logout'),
+          // );
         },
       ),
     );
