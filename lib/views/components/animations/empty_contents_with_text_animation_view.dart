@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'empty_contents_animation_view.dart';
 
-class EmptyContentsWithTextAnimation extends StatelessWidget {
+class EmptyContentsWithTextAnimationView extends StatelessWidget {
   final String text;
 
-  const EmptyContentsWithTextAnimation({
+  const EmptyContentsWithTextAnimationView({
     super.key,
     required this.text,
   });
