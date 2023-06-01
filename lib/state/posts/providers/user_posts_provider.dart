@@ -9,6 +9,7 @@ import '../../constants/firebase_field_name.dart';
 import '../models/post.dart';
 import '../models/post_key.dart';
 
+/// Reading user posts.
 final userPostsProvider = StreamProvider.autoDispose<Iterable<Post>>(
   (ref) {
     final userId = ref.watch(userIdProvider);

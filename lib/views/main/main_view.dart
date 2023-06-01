@@ -1,8 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:instantgram/state/image_upload/helpers/image_picker_helper.dart';
+import 'package:instantgram/state/post_settings/providers/post_setting_provider.dart';
+import 'package:instantgram/views/create_new_post/create_new_post_view.dart';
 
 import '../../state/auth/providers/auth_state_provider.dart';
+import '../../state/image_upload/models/file_type.dart';
 import '../components/dialogs/alert_dialog_model.dart';
 import '../components/dialogs/logout_dialog.dart';
 import '../constants/strings.dart';
@@ -27,13 +33,62 @@ class _MainViewState extends ConsumerState<MainView> {
             // Button using for adding/uploading video.
             IconButton(
               icon: const FaIcon(FontAwesomeIcons.film),
-              onPressed: () {},
+              onPressed: () async {
+                // pick a video first
+                final videoFile =
+                    await ImagePickerHelper.pickVideoFromGallery();
+                if (videoFile == null) {
+                  return;
+                }
+
+                // reset the postSettingProvider
+                ref.refresh(postSettingProvider);
+
+                // goto the screen to create a new post.
+                if (!mounted) {
+                  return;
+                }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => CreateNewPostView(
+                      fileToPost: videoFile,
+                      fileType: FileType.video,
+                    ),
+                  ),
+                );
+              },
             ),
 
             // Button using for adding/uploading photo.
             IconButton(
               icon: const Icon(Icons.add_photo_alternate_outlined),
-              onPressed: () {},
+              onPressed: () async {
+                // pick a image first.
+                final imageFile =
+                    await ImagePickerHelper.pickImageFromGallery();
+                if (imageFile == null) {
+                  return;
+                }
+
+                // reset the postSettingProvider
+                ref.refresh(postSettingProvider);
+
+                // goto the screen to create a new post.
+                if (!mounted) {
+                  log('mounted');
+                  return;
+                }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => CreateNewPostView(
+                      fileToPost: imageFile,
+                      fileType: FileType.image,
+                    ),
+                  ),
+                );
+              },
             ),
 
             // Button using for Logout application.
