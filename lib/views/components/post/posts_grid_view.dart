@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instantgram/views/post_comments/post_comments_view.dart';
 
 import '../../../state/posts/models/post.dart';
 import 'post_thumbnail_view.dart';
@@ -26,14 +27,14 @@ class PostsGridView extends StatelessWidget {
         return PostThumbnailView(
           post: post,
           onTapped: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => PostDetailsView(
-            //       post: post,
-            //     ),
-            //   ),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PostCommentsView(
+                  postId: post.postId,
+                ),
+              ),
+            );
           },
         );
       },
