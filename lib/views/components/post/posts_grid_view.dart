@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instantgram/views/post_comments/post_comments_view.dart';
 
 import '../../../state/posts/models/post.dart';
+import '../../post_details/post_details_view.dart';
 import 'post_thumbnail_view.dart';
 
 class PostsGridView extends StatelessWidget {
@@ -30,8 +30,8 @@ class PostsGridView extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => PostCommentsView(
-                  postId: post.postId,
+                builder: (context) => PostDetailsView(
+                  post: post,
                 ),
               ),
             );
