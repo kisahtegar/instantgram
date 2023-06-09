@@ -12,6 +12,7 @@ import '../../state/image_upload/models/file_type.dart';
 import '../components/dialogs/alert_dialog_model.dart';
 import '../components/dialogs/logout_dialog.dart';
 import '../constants/strings.dart';
+import '../tabs/search/search_view.dart';
 import '../tabs/users_posts/user_posts_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
@@ -122,7 +123,7 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: [
             UserPostsView(),
-            UserPostsView(),
+            SearchView(),
             UserPostsView(),
           ],
         ),
