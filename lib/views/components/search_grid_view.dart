@@ -6,7 +6,7 @@ import '../constants/strings.dart';
 import 'animations/data_not_found_animation_view.dart';
 import 'animations/empty_contents_with_text_animation_view.dart';
 import 'animations/error_animation_view.dart';
-import 'post/posts_grid_view.dart';
+import 'post/posts_sliver_grid_view.dart';
 
 class SearchGridView extends ConsumerWidget {
   const SearchGridView({
@@ -37,7 +37,7 @@ class SearchGridView extends ConsumerWidget {
             child: DataNotFoundAnimationView(),
           );
         } else {
-          return PostsGridView(
+          return PostsSliverGridView(
             posts: posts,
           );
         }
