@@ -3,15 +3,15 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instantgram/state/image_upload/models/file_type.dart';
-import 'package:instantgram/state/image_upload/models/thumbnail_request.dart';
-import 'package:instantgram/views/constants/strings.dart';
 
 import '../../state/auth/providers/user_id_provider.dart';
+import '../../state/image_upload/models/file_type.dart';
+import '../../state/image_upload/models/thumbnail_request.dart';
 import '../../state/image_upload/providers/image_uploader_provider.dart';
 import '../../state/post_settings/models/post_setting.dart';
 import '../../state/post_settings/providers/post_setting_provider.dart';
 import '../components/file_thumbnail_view.dart';
+import '../constants/strings.dart';
 
 class CreateNewPostView extends StatefulHookConsumerWidget {
   const CreateNewPostView({

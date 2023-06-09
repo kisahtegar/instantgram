@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instantgram/state/auth/providers/user_id_provider.dart';
 
+import '../../auth/providers/user_id_provider.dart';
 import '../models/post.dart';
 
 final canCurrentUserDeletePostProvider =

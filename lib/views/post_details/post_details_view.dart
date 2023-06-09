@@ -12,7 +12,7 @@ import '../components/animations/error_animation_view.dart';
 import '../components/animations/loading_animation_view.dart';
 import '../components/animations/small_error_animation_view.dart';
 import '../components/comment/compact_comment_column.dart';
-import '../components/\dialogs/alert_dialog_model.dart';
+import '../components/dialogs/alert_dialog_model.dart';
 import '../components/dialogs/delete_dialog.dart';
 import '../components/like_button.dart';
 import '../components/likes_count_view.dart';
