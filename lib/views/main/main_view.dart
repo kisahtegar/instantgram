@@ -3,15 +3,16 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instantgram/state/image_upload/helpers/image_picker_helper.dart';
-import 'package:instantgram/state/post_settings/providers/post_setting_provider.dart';
-import 'package:instantgram/views/create_new_post/create_new_post_view.dart';
 
 import '../../state/auth/providers/auth_state_provider.dart';
+import '../../state/image_upload/helpers/image_picker_helper.dart';
 import '../../state/image_upload/models/file_type.dart';
+import '../../state/post_settings/providers/post_setting_provider.dart';
 import '../components/dialogs/alert_dialog_model.dart';
 import '../components/dialogs/logout_dialog.dart';
 import '../constants/strings.dart';
+import '../create_new_post/create_new_post_view.dart';
+import '../tabs/home/home_view.dart';
 import '../tabs/search/search_view.dart';
 import '../tabs/users_posts/user_posts_view.dart';
 
@@ -124,7 +125,7 @@ class _MainViewState extends ConsumerState<MainView> {
           children: [
             UserPostsView(),
             SearchView(),
-            UserPostsView(),
+            HomeView(),
           ],
         ),
       ),
